@@ -1,5 +1,5 @@
 const fizzbuzz = num =>  {
-	for(var i = 0; i <= num; i++){
+	for(var i = 1; i <= num; i++){
 		// place fizzbuzz conditional on top because only one condition executed
 		// divisible by 3 and 5, same as divisible by 15
 		if(i % 15 === 0) console.log('FizzBuzz');
@@ -9,4 +9,4 @@ const fizzbuzz = num =>  {
 	}
 }
 
-fizzbuzz(process.argv[2]);
+fizzbuzz(process.argv[2] || 30);
