@@ -6,24 +6,24 @@ const harmlessRansomNote = (noteText, magazinText) => {
 	const magazinObject = {};
 
 	// add each word in magazine as property of magazineObject & count occurrences
-	magazinArray.forEach( word => {
+	magazinArray.forEach( magazineWord => {
 		// initialize word property in object
-		if(!magazinObject[word]) magazinObject[word] = 0;
+		if(!magazinObject[ magazineWord ]) magazinObject[ magazineWord ] = 0;
 		
 		// increment at each new occurrence
-		magazinObject[word]++;
+		magazinObject[ magazineWord ]++;
 	});
 
 
 	let noteIsPossible = true;
 	
 	// check of each word on noteArray is present on magazineObject
-	noteArray.forEach( word => {
+	noteArray.forEach( noteWord => {
 		// decrement magazine word occurrences when note word found
-		if(magazinObject[word]) {
-			magazinObject[word]--;
+		if(magazinObject[ noteWord ]) {
+			magazinObject[ noteWord ]--;
 			// check if enough word occurrences in magazine to make note
-			if(magazinObject[word] < 0)
+			if(magazinObject[ noteWord ] < 0)
 				 noteIsPossible = false;
 		}
 		// word not found in maazine so note is not possible
