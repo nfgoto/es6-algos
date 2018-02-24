@@ -9,4 +9,4 @@ const fizzbuzz = num =>  {
 	}
 }
 
-fizzbuzz(40);
+fizzbuzz(process.argv[2]);
