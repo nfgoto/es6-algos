@@ -5,6 +5,8 @@
  *  - ignoring punctuation and case
  *  - without regex
  * 
+ * Time Complexity: O(n)
+ * 
  * @param {*} stringInput 
  */
 const isPalindrome = stringInput => {
