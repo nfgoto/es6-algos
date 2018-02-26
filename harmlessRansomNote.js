@@ -1,11 +1,23 @@
-// we assume no punctuation nor case in magazine text
-const harmlessRansomNote = (noteText, magazinText) => {
+/**
+ * HARMLESS RANSOM NOTE ALGORITHM
+ * 
+ * Purpose:
+ * verify that enough words in magazine to write note
+ * we assume no punctuation nor case in magazine text
+ * 
+ * Time complexity: O(n)
+ * 
+ * @param {string} noteText 
+ * @param {string} magazineText 
+ */
+const harmlessRansomNote = (noteText, magazineText) => {
 	// change the input strings into arrays of words
 	const noteArray = noteText.split(' ');
-	const magazinArray = magazinText.split(' ');
+	const magazinArray = magazineText.split(' ');
 	const magazinObject = {};
 
-	// add each word in magazine as property of magazineObject & count occurrences
+	// using an object as a hashtable
+	// add each word in magazine as property key of magazineObject & count occurrences
 	magazinArray.forEach( magazineWord => {
 		// initialize word property in object
 		if(!magazinObject[ magazineWord ]) magazinObject[ magazineWord ] = 0;
