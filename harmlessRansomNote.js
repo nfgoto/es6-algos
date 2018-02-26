@@ -19,7 +19,7 @@ const harmlessRansomNote = (noteText, magazineText) => {
 	// using an object as a hashtable
 	// add each word in magazine as property key of magazineObject & count occurrences
 	magazinArray.forEach( magazineWord => {
-		// initialize word property in object
+		// initialize word property in hashtable
 		if(!magazinObject[ magazineWord ]) magazinObject[ magazineWord ] = 0;
 		
 		// increment at each new occurrence
