@@ -1,11 +1,12 @@
-/*
-    IS PALINDROME ALGORITHM
-
-    Take string input and check if is palindrome
-    - ignoring punctuation and case
-    - without regex
-*/
-
+/**
+ *  IS PALINDROME ALGORITHM
+ *  
+ * Take string input and check if is palindrome
+ *  - ignoring punctuation and case
+ *  - without regex
+ * 
+ * @param {*} stringInput 
+ */
 const isPalindrome = stringInput => {
     // spread operator to create array of characters
     const iCharArr = [ ...( stringInput.toLowerCase().trim() ) ];
