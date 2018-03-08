@@ -11,7 +11,7 @@ const fizzbuzz = num =>  {
 	const nb = Number(num);
 	
 	// checking for NaN
-	if(!(nb !== nb)){
+	if(nb === nb){
 		for(var idx = 1; idx <= nb; idx++){
 			// place fizzbuzz conditional on top because only one condition executed
 			// divisible by 3 and 5, same as divisible by 15
